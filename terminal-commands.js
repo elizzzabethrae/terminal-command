@@ -11,13 +11,14 @@ module.exports.ls = () => {
 };
 
 module.exports.touch = (name) => {
-    fs.writeFile(name, '', function(err) {
+    fs.writeFile(name, '', (err) => {
       if(err) throw err;
       console.log('Saved text!');
-    });
+    })
+}
   
   module.exports.mkdir = (name) => {
    fs.mkdir(name, { recursive: true }, (err) => {
      if (err) throw err;
   });
-  }
+}
